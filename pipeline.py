@@ -37,11 +37,11 @@ import tensorflow as tf
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, Dropout, Input,Concatenate
 from sklearn.metrics import accuracy_score, roc_auc_score
-path = "D:/Downloads/INTELIGENCIA ARTIFICIAL/Ejercicios Quiz/"
+
 
 
 def cargar_datos():
-    path = "D:/Downloads/INTELIGENCIA ARTIFICIAL/Ejercicios Quiz/"
+    path = os.path.join(os.getcwd(), "Ejercicios Quiz")
     archivo_tsv = "training_set_rel3.tsv"
     df = pd.read_csv(path + archivo_tsv, delimiter='\t', encoding='latin1')
     datos=  pd.read_pickle(path + 'training_features_NLP_Ensayos.pkl')
